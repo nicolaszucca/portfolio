@@ -1,0 +1,276 @@
+/*
+    ** All elements border-box
+*/
+*,
+*:before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    ** Root element font size
+    ** No default margins and paddings
+*/
+html,
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    ** Root element font size
+    ** No default margins and paddings
+*/
+html,
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    ** Body main style
+*/
+body {
+    line-height: 1.317101995;
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+
+}
+
+body {
+    background-color: #e9e2e2;
+    color: #141414;
+}
+
+/* 
+    ** Variables
+*/
+$blue-1: #261ad1;
+$bezier-t: cubic-bezier(0.23, 1, 0.32, 1);
+
+
+
+/*
+    ** Header
+*/
+header {
+    height: 15vh;
+    display: flex;
+}
+
+/*
+    ** Logo
+*/
+.logo {
+    display: flex;
+    justify-content: center;
+    background-color: $blue-1;
+    height: 7rem;
+    margin: 15px;
+    cursor: pointer;
+    width: 7rem;
+    position: fixed;
+}
+
+.img-logo {
+    height: 5rem;
+    margin: 0px;
+    top: 30px;
+    cursor: pointer;
+    transition: 1s ease;
+    position: fixed;
+}
+
+.img-logo:hover {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+
+/* 
+    ** Menu
+*/
+.burger {
+    width: 3.8rem;
+    height: 3.8rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 15px;
+    background-color: $blue-1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.burger-inner {
+    position: relative;
+}
+
+.burger-inner-line {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 29px;
+    margin: 0 auto;
+    background-color: #ffffff;
+
+    &:nth-child(2) {
+        position: relative;
+    }
+
+    &:first-child {
+        bottom: 6px;
+        transition: bottom 250ms 250ms $bezier-t, transform 250ms $bezier-t;
+    }
+
+    &:last-child {
+        top: 6px;
+        transition: top 250ms 250ms $bezier-t, transform 250ms $bezier-t;
+    }
+}
+
+
+.toggled .burger-inner-line {
+    &:nth-child(2) {
+        background-color: transparent;
+    }
+
+    &:first-child {
+        bottom: 0;
+        transform: rotate(-45deg);
+        transition: bottom 250ms $bezier-t, transform 250ms 250ms $bezier-t;
+    }
+
+    &:last-child {
+        top: 0;
+        transform: rotate(45deg);
+        transition: top 250ms $bezier-t, transform 250ms 250ms $bezier-t;
+    }
+}
+
+.wrapper-main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem 9rem;
+    align-items: flex-end;
+    overflow: hidden;
+    z-index: 10;
+    visibility: hidden;
+}
+
+
+.main-nav {
+    width: 100%;
+    display: flex;
+    max-width: 1182px;
+    margin: 0 auto;
+
+    &-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &-item {
+        opacity: 0;
+        transition: all 600ms ease 100ms;
+
+        @for $i from 1 through 5 {
+            &:nth-child(#{ $i }) {
+                transform: translateX(40px * $i);
+            }
+        }
+    }
+
+    &-item:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    &-link {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 3.75rem;
+    }
+}
+
+
+// the animation
+.nav-bg {
+    width: 100vw;
+    height: 33.3333vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: background-position 760ms ease 700ms,
+        transform 760ms ease 1260ms,
+        visibility 760ms ease 2220ms;
+    visibility: hidden;
+
+    &.top {
+        transform: translateY(-33.3333vh);
+        background: linear-gradient(to top, $blue-1 50%, #1d1d1d 50%);
+        background-size: 100% 200%;
+        background-position: -100% 100%;
+    }
+
+    &.middle {
+        transform: translateY(33.3333vh) scaleY(0);
+        background-color: #1d1d1d;
+    }
+
+    &.bottom {
+        transform: translateY(100vh);
+        background: linear-gradient(to bottom, #1d1d1d 50%, $blue-1 50%);
+        background-size: 100% 200%;
+        background-position: 0 -100%;
+    }
+}
+
+.wrapper-main-nav.active {
+    visibility: visible;
+
+    .main-nav-item {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 600ms ease 1520ms;
+    }
+
+    .nav-bg {
+        visibility: visible;
+        transition: transform 760ms 200ms, background-position 760ms 760ms;
+
+        &.top {
+            transform: translateY(0);
+            background-position: 0 0;
+        }
+
+        &.middle {
+            transform: translateY(33.3333vh) scaleY(1.1);
+        }
+
+        &.bottom {
+            transform: translateY(66.6666vh);
+            background-position: 0 0;
+        }
+    }
+
+    .main-nav-link {
+        transition: background-color .5s;
+    }
+
+    .main-nav-link:hover {
+        background-color: $blue-1;
+    }
+}
