@@ -412,7 +412,48 @@ header {
     background-color: #6840a3;
 }
 
+/* 
+    ** Mobile
+*/
+@media(max-width: 480px) {
+    header {
+        height: 8vh;
+    }
 
+    .hero-left {
+        margin-left: 10px;
+        padding: 0;
+        padding-top: 50px;
+    }
+
+    .logo {
+
+        flex-direction: row;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .logo a {
+        align-self: flex-start;
+        background-color: burlywood;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        height: 0%;
+
+    }
+
+
+    .img-logo {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-top: 8px;
+    }
+}
+
+/* 
+    **Medium
+*/
 @media (min-width: 750px) {
     .hero-right {
         display: flex;
@@ -499,8 +540,6 @@ header {
         transition: 1s text-decoration;
         z-index: 1;
     }
-
-
 
     #wheather-proyect {
         margin-bottom: 0;
@@ -620,7 +659,9 @@ header {
 
 }
 
-
+/*
+    ** +1800 - Full screen
+*/
 @media (min-width: 1800px) {
 
     .works-titles {
