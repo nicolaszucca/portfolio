@@ -301,13 +301,26 @@ header {
     ** background imgage 
 */
 
-.view-container-project {
+.img-background {
     position: absolute;
     top: 0;
     min-height: 65%;
     width: 100%;
     background-image: linear-gradient(to bottom,
             rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(https://uploads-ssl.webflow.com/531a07f26fc18fe112001509/5ae899ef8423ad5a3acebc59_sl.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -5;
+}
+
+.view-container-project {
+    // position: absolute;
+    top: 0;
+    min-height: 65%;
+    width: 100%;
+    // background-image: linear-gradient(to bottom,
+    //         rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(https://uploads-ssl.webflow.com/531a07f26fc18fe112001509/5ae899ef8423ad5a3acebc59_sl.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -325,7 +338,7 @@ header {
     flex-direction: column;
     width: 95%;
     color: #dadada;
-    margin-top: 280px;
+    margin-top: 95px;
 }
 
 .project-title h1 {
@@ -335,7 +348,7 @@ header {
 
 .project-title .description-proyect {
     font-size: 30px;
-    margin-top: 90px;
+    margin-top: 70px;
 }
 
 
@@ -349,7 +362,7 @@ header {
     ** hero section
 */
 .container-info-block {
-    margin-top: 500px;
+    // margin-top: 500px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -358,7 +371,7 @@ header {
 .container-description {
     display: flex;
     flex-direction: column;
-    margin: 70px 15px 35px 15px;
+    margin: 120px 15px 35px 15px;
 }
 
 .container-description h2 {
@@ -380,6 +393,7 @@ header {
     background-color: transparent;
     height: 10px;
     margin-top: 1rem;
+    margin-bottom: 5px;
 }
 
 .arrow {
@@ -574,8 +588,17 @@ header {
 
     .project-title .description-proyect {
         margin-top: 50px;
-        text-align: center;
+        font-size: 26px;
+        text-align: start;
         align-self: center;
+    }
+
+    .container-description {
+        margin-top: 120px;
+    }
+
+    .container-description p {
+        margin-bottom: 50px;
     }
 
     .footer-section {
@@ -589,19 +612,19 @@ header {
 @media (min-width: 768px) {
     .container-info-block {
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
+
 
     }
 
     .container-description {
-        width: 100%;
-        margin: 15px;
+        width: 60%;
+
     }
 
     .container-tec-used {
-        width: 100%;
+        width: 40%;
         margin-left: 100px;
+        margin-top: 120px;
     }
 }
 
@@ -613,9 +636,20 @@ header {
 
 @media (min-width: 948px) {
     .container-info-block {
-        width: 100%;
+        width: 90%;
         justify-content: center;
         align-items: center;
-        margin-block-end: 20px;
+
+        margin: auto;
+        max-width: 940px;
+    }
+
+    .project-title {
+        width: 50%;
+        justify-content: center;
+    }
+
+    .container-description {
+        margin-top: 165px;
     }
 }
