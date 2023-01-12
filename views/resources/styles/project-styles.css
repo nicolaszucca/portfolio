@@ -303,7 +303,6 @@ header {
   flex-direction: column;
   width: 95%;
   color: #dadada;
-  margin-top: 95px;
 }
 
 .project-title h1 {
@@ -312,8 +311,8 @@ header {
 }
 
 .project-title .description-proyect {
-  font-size: 30px;
-  margin-top: 70px;
+  font-size: 25px;
+  margin-top: 43px;
 }
 
 .separator {
@@ -538,7 +537,6 @@ header {
     margin-left: 8px;
   }
   .project-title {
-    margin-top: 180px;
     align-self: flex-end;
   }
   .project-title .description-proyect {
@@ -590,7 +588,7 @@ header {
     width: 50%;
     justify-content: center;
   }
-  .container-description {
-    margin-top: 165px;
-  }
+  /* .container-description {
+      margin-top: 165px;
+  } */
 }/*# sourceMappingURL=project-styles.css.map */

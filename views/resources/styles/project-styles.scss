@@ -336,7 +336,7 @@ header {
     flex-direction: column;
     width: 95%;
     color: #dadada;
-    margin-top: 95px;
+    //margin-top: 95px;
 }
 
 .project-title h1 {
@@ -345,8 +345,8 @@ header {
 }
 
 .project-title .description-proyect {
-    font-size: 30px;
-    margin-top: 70px;
+    font-size: 25px;
+    margin-top: 43px;
 }
 
 
@@ -580,7 +580,7 @@ header {
     }
 
     .project-title {
-        margin-top: 180px;
+        //margin-top: 180px;
         align-self: flex-end;
     }
 
@@ -647,7 +647,7 @@ header {
         justify-content: center;
     }
 
-    .container-description {
+    /* .container-description {
         margin-top: 165px;
-    }
+    } */
 }
