@@ -6,7 +6,6 @@ class Server {
     constructor() {
         this.port = process.env.PORT || 3000;
         this.app = express();
-        this.path = '';
 
         //Middlewares
         this.middlewares();
@@ -15,14 +14,15 @@ class Server {
     };
 
     middlewares() {
-        this.app.set('view engine', 'html');
-        this.app.engine('html', require('hbs').__express);
+        this.app.use(express.static('views'));
+        this.app.set('view engine', 'hbs');
     };
 
     routes() {
-        this.app.get(this.path, (req, res) => {
-            res.send("test 1");
-        });
+        this.app.get('/', require('../routes/routes'));
+        this.app.get('/login', require('../routes/routes'));
+        this.app.get('/crud', require('../routes/routes'));
+        this.app.get('/about', require('../routes/routes'));
     };
 
     listen() {
