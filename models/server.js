@@ -24,10 +24,7 @@ class Server {
     };
 
     routes() {
-        this.app.get('/', require('../routes/routes'));
-        this.app.get('/login', require('../routes/routes'));
-        this.app.get('/crud', require('../routes/routes'));
-        this.app.get('/about', require('../routes/routes'));
+        this.app.use('/', require('../routes/routes'));
     };
 
     listen() {
