@@ -499,7 +499,7 @@ header {
     opacity: 0;
     z-index: 0;
   }
-  #extension-img-block {
+  #crud-img-block {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -512,7 +512,7 @@ header {
     opacity: 0;
     z-index: 0;
   }
-  #first-img-block {
+  #scrapper-img-block {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -525,7 +525,7 @@ header {
     opacity: 0;
     z-index: 0;
   }
-  #crud-img-block {
+  #first-img-block {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -538,42 +538,15 @@ header {
     opacity: 0;
     z-index: 0;
   }
-  #wheather-img-block {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    background-image: url(../test-images/wheather.jpg);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0;
-    z-index: 0;
-  }
   .imgs-active {
-    -webkit-animation-name: fadeIn;
-            animation-name: fadeIn;
-    -webkit-animation-duration: 1.3s;
-            animation-duration: 1.3s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-name: fadeIn;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
   }
   .imgs-inactive {
-    -webkit-animation-name: fadeOut;
-            animation-name: fadeOut;
-    -webkit-animation-duration: 1.3s;
-            animation-duration: 1.3s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-  }
-  @-webkit-keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+    animation-name: fadeOut;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
   }
   @keyframes fadeIn {
     from {
@@ -581,14 +554,6 @@ header {
     }
     to {
       opacity: 1;
-    }
-  }
-  @-webkit-keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
     }
   }
   @keyframes fadeOut {

@@ -567,7 +567,7 @@ header {
         z-index: 0;
     }
 
-    #extension-img-block {
+    #crud-img-block {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -581,7 +581,7 @@ header {
         z-index: 0;
     }
 
-    #first-img-block {
+    #scrapper-img-block {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -595,7 +595,7 @@ header {
         z-index: 0;
     }
 
-    #crud-img-block {
+    #first-img-block {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -608,21 +608,6 @@ header {
         opacity: 0;
         z-index: 0;
     }
-
-    #wheather-img-block {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        right: 0;
-        background-image: url(../test-images/wheather.jpg);
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: 0;
-        z-index: 0;
-    }
-
 
     .imgs-active {
         animation-name: fadeIn;
