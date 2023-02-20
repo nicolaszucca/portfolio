@@ -14,6 +14,10 @@ router.get('/crud', (req, res) => {
     res.render('crud');
 })
 
+router.get('/scrapper', (req, res) => {
+    res.render('scrapper');
+})
+
 router.get('/about', (req, res) => {
     res.render('about');
 })
