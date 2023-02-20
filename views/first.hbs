@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e6989afcf9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,100&family=Work+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../resources/styles/project-styles.css">
+    <link rel="stylesheet" href="../resources/styles/first-image-style.css">
+    <title>First project</title>
+</head>
+
+<body>
+
+    <!-- header section -->
+
+    {{>header}}
+
+    <!-- menu section -->
+    {{>backgroundMenu}}
+
+    <!-- about project (login) -->
+
+    <section>
+        <div class="img-background"></div>
+        <div class="view-container-project">
+            <div class="project-title">
+                <h1>First project</h1>
+                <div class="separator"></div>
+                <p class="description-proyect">One of my first projects that allowed me to take my first steps in the
+                    world of web development.</p>
+            </div>
+        </div>
+
+        <article>
+            <div class="container-info-block">
+                <div class="container-description">
+                    <h2 class="title-description">Description</h2>
+                    <p class="paragraph-description">This is a project based on one of my first courses related to
+                        programming. Emphasizing HTML, CSS and Javascript. The
+                        challenge was to build an application that would store information on our expenses in rendered
+                        tables in the HTML
+                        itself. The localStorage of the browser was used to have a record of each expense added and then
+                        it was rendered in the
+                        tables to be able to visualize the information. You could also create new categories for our
+                        expenses and delete them
+                    </p>
+
+                    <div class="data-container-about">
+                        <div class="arrow">> </div>
+
+                        <div class="about-me-paragraph">
+                            <a href="https://github.com/nicolaszucca/app-gastos" class="about-me-a">Check code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-tec-used">
+                    <div class="tecnology-used">TECNOLOGY USED</div>
+                    <div class="steps-block">
+                        <div class="step-number">01</div>
+                        <div class="step-process">HTML</div>
+                    </div>
+                    <div class="steps-block">
+                        <div class="step-number">02</div>
+                        <div class="step-process">CSS - Materialize</div>
+                    </div>
+                    <div class="steps-block">
+                        <div class="step-number">03</div>
+                        <div class="step-process">Javascript</div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- footer-section -->
+    <section>
+        <footer class="footer-section">
+            <div class="footer-title">FIND ME</div>
+            <div class="social-media-section">
+                <div class="background-linkedin">
+                    <a class="linkedin" href="https://www.linkedin.com/in/nicolaszuccarello/">Linkedin
+                    </a>
+                </div>
+                <p> / </p>
+                <div class="background-github">
+                    <a class="github" href="https://github.com/nicolaszucca">Github
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+
+
+    <script src="../resources/js/animation-menu.js"></script>
+</body>
+
+</html>

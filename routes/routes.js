@@ -18,6 +18,10 @@ router.get('/scrapper', (req, res) => {
     res.render('scrapper');
 })
 
+router.get('/first', (req, res) => {
+    res.render('first');
+})
+
 router.get('/about', (req, res) => {
     res.render('about');
 })
